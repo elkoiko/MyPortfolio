@@ -7,8 +7,8 @@ const socialLinks: { title: string, linkText: string, url: string }[] = [
 
 export default function SocialLinks() {
     return <div className="mt-12">
-        {socialLinks.map((link) => (
-            <SocialLink {...link} />
+        {socialLinks.map((link, index) => (
+            <SocialLink key={index} {...link} />
         ))}
     </div>
 }
